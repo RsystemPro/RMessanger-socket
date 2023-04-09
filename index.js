@@ -3,6 +3,8 @@ const app = express()
 app.use(express.json());
 const io = require("socket.io")(3005,{cors: {origin: "*",methods: ["GET", "POST"]}})
 
+console.log('initialized');
+
 io.on("connection", (socket) => {
     console.log("SocketIO is Runing -----------------------",Math.random()*10);
 
